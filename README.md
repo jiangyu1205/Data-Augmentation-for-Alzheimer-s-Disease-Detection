@@ -1,1 +1,1 @@
-# Data-Augmentation-for-Alzheimer-s-Disease-Detection
+# Cognitive-Heuristic Guided Multimodal Data Augmentation for Alzheimer’s Disease Detection Using LLM and TTS

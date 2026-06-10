@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cognitive-Heuristic Guided Multimodal Data Augmentation for Alzheimer’s Disease Detection Using LLM and TTS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Cognitive-Heuristic Guided Multimodal Data Augmentation for Alzheimer’s Disease Detection Using LLM and TTS</h1>
+
+    <section class="panel">
+      <h2>Abstract</h2>
+      <textarea readonly>
+Alzheimer’s disease (AD) is a progressive neurodegenerative disorder, and early detection is critical for intervention. Speech offers a non-invasive and accessible biomarker for AD detection, but data scarcity remains a major bottleneck. We propose a cognitive-heuristic guided multimodal generative augmentation framework that explicitly models AD-related cognitive decline patterns. The framework combines retrieval-augmented generation (RAG) with large language models (LLMs) for cognitively informed text generation, and an attribute-guided text-to-speech (TTS) system for AD-related acoustic synthesis. By enforcing linguistic-acoustic consistency, the method captures disfluency, pause structure, and lexical alterations associated with cognitive decline. Experiments on multiple benchmarks show consistent performance gains, demonstrating the effectiveness of cognition-driven multimodal synthesis for speech-based AD detection.
+      </textarea>
+    </section>
+
+    <section class="panel">
+      <h2>Part 1: Original Audio (Patient Audio)</h2>
+      <div class="audio-list">
+        <div class="audio-item">
+          <p>Patient Audio 1</p>
+          <audio controls preload="none" src="gt_audio/adrso024_part1/vocals.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>Patient Audio 2</p>
+          <audio controls preload="none" src="gt_audio/adrso024_part2/vocals.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>Patient Audio 3</p>
+          <audio controls preload="none" src="gt_audio/adrso024_part3/vocals.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>Patient Audio 4</p>
+          <audio controls preload="none" src="gt_audio/adrso024_part4/vocals.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>Patient Audio 5</p>
+          <audio controls preload="none" src="gt_audio/adrso024_part5/vocals.wav"></audio>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Part 2: Cognitive Markers in Audio</h2>
+      <textarea readonly>
+What do you see happening in that picture ? Oh , water fell off the sink . [long_pause] Little boy fell off his uh , [long_pause] what ' s that called ? [long_pause] He fell off of that thing .  He [long_pause] fell down . Anything else  you see happening ? The [short_pause] house comes to the end and you get that water spout all over the floor  . [medium_pause] It ' s terrible . [long_pause] Any other action yet ?  This little girl  was just  [short_pause] looking at  her brother .
+
+---
+
+1) Pause markers: frequent [short_pause], [medium_pause], [long_pause]
+2) Fillers and hesitation: repeated use of "uh" and "um"
+3) Uncertainty expressions: e.g., "what ' s that called ?", "Anything else ?"
+4) Incomplete or fragmented phrasing: repetitions and sentence breaks
+5) Difficulty extracting details: unstable description of scene details
+6) Signs of cognitive load: narrative backtracking and interruptions
+      </textarea>
+    </section>
+
+    <section class="panel">
+      <h2>Part 3: Synthesized Text</h2>
+      <textarea readonly>
+So , uh , the kids are workin' over in the corner . [short_pause] And uh , we ' re grading . Uh , then they ' re gonna grab cookies out of the jar . [short_pause] And the mother doesn ' t really see it ' cause uh she ' s inside drying uh clothes . [medium_pause] So I ' m kinda like uh, imagining this picture where she ' s working hard and uh the kids are just playing around . [short_pause] Uh, something happened and a dish got knocked over [short_pause] and there was like [short_pause] water spilled everywhere on the floor . [medium_pause] But uh, it didn ' t all dry up or anything . [short_pause] There ' s water splashing from the sink . [short_pause] Oh, uh, not anywhere else though . [short_pause] One of the kids might uh end up getting hurt . [short_pause] Like , uh , with a bump on their head or something . [short_pause] And uh , sometimes the image of it all comes really clear . [short_pause] Other times uh it ' s like weak or fuzzy . [medium_pause] Like , sometimes I ' m just like uh <fuzzy> , what am I seeing ? </fuzzy> [long_pause] Um , was there anything more in the picture ? [medium_pause] Mostly I can see the scene [short_pause] pretty clearly , but uh , those smaller uh details ... I can ' t always uh catch ' em . [medium_pause] Okay , uh , I guess that ' s all I can tell ya about the picture
+      </textarea>
+    </section>
+
+    <section class="panel">
+      <h2>Part 4: TTS Generated Audio</h2>
+      <div class="audio-list">
+        <div class="audio-item">
+          <p>TTS Audio 1</p>
+          <audio controls preload="none"
+            src="generated/1.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>TTS Audio 2</p>
+          <audio controls preload="none"
+            src="generated/2.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>TTS Audio 3</p>
+          <audio controls preload="none"
+            src="generated/3.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>TTS Audio 4</p>
+          <audio controls preload="none"
+            src="generated/4.wav"></audio>
+        </div>
+        <div class="audio-item">
+          <p>TTS Audio 5</p>
+          <audio controls preload="none"
+            src="generated/5.wav"></audio>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
